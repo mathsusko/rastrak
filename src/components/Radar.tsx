@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
-import { contact, radar } from "@/lib/content";
+import { radar, waLink } from "@/lib/content";
 
 // posições determinísticas dos alvos no radar (ângulo, raio)
 const blipPos = (i: number, n: number, tab: number) => {
@@ -49,8 +49,8 @@ export default function Radar() {
   );
 
   const connect = () => {
-    window.dispatchEvent(new CustomEvent("rastrak:connect", { detail: contact.types[tab] }));
-    document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
+    const msg = `Olá, Raphael! Vi o radar da RASTRAK (${radar.tabs[tab].short}) e quero conversar.`;
+    window.open(waLink(msg), "_blank", "noopener");
   };
 
   return (

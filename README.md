@@ -14,19 +14,13 @@ npm run dev
 ## Estrutura
 
 - `src/lib/content.ts` — todo o texto do site (dossiê). Hipóteses do Radar e BPM ficam aqui para trocar quando o Raphael responder o questionário.
-- `src/components/` — uma seção por arquivo (Preloader 00, Hero 01, Sequence, Manifesto 02, Transmissions 03, Radar 04, Presskit 05, Contact 06, Footer).
+- `src/components/` — uma seção por arquivo (Preloader 00, Hero 01, Sequence, Manifesto 02, Transmissions 03, Radar 04, Presskit 05, Cta 05 (WhatsApp/Instagram), Footer).
 - `src/lib/director.ts` — direção da cabeça WebGL ao longo do scroll.
 - `public/frames` — sequência de frames (scroll) extraída de "Rastrak 02.mp4".
 - `public/data/head.bin` — nuvem de pontos da cabeça codificada (gerada a partir da logo completa).
 - `public/media` — trecho de áudio (min 3:10 da faixa) e loops das transmissões.
-- `public/presskit` — zips de logos e fotos oficiais.
 
-## Formulário de booking
+## Contato
 
-`/api/contact` envia e-mail via Resend se estas variáveis estiverem configuradas na Vercel:
-
-- `RESEND_API_KEY`
-- `CONTACT_TO` (e-mail que recebe as propostas)
-- `CONTACT_FROM` (opcional, remetente verificado no Resend)
-
-Sem elas, as mensagens só aparecem no log da função.
+Sem formulário nem banco de dados: o contato é feito pelo WhatsApp do Raphael e pelo direct do Instagram.
+O número fica em `whatsapp.number` em `src/lib/content.ts`.

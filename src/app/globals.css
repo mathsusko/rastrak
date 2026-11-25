@@ -285,35 +285,7 @@ main.is-booting .hero-inner, main.is-booting .techbar { visibility: hidden; }
 .pk-rider { list-style: none; display: grid; gap: 10px; color: var(--text); text-transform: none; letter-spacing: .02em; }
 .pk-rider li::before { content: "› "; color: var(--accent); }
 
-/* 06 CONTATO */
-.contact { background: rgba(8, 9, 10, .72); }
-.contact::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
-  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 64px 64px; mask: linear-gradient(transparent, #000 30%, #000 70%, transparent);
-}
-.ct-grid { position: relative; display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 6vw, 110px); }
-.ct-alt { margin-top: 32px; }
-.ct-alt a { color: var(--accent); }
-.ct-form { display: grid; gap: 26px; }
-.ct-form label { display: grid; gap: 10px; }
-.ct-form label > span, .ct-form legend { color: var(--slate); }
-.ct-form input, .ct-form textarea {
-  width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--text);
-  font: inherit; font-size: 18px; padding: 10px 0; outline: none; transition: border-color .2s; resize: vertical;
-}
-.ct-form input:focus, .ct-form textarea:focus { border-color: var(--accent); }
-.ct-form fieldset { border: 0; display: grid; gap: 12px; }
-.ct-types { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { display: inline-flex !important; padding: 10px 14px; border: 1px solid var(--line); color: var(--slate-2); cursor: pointer; transition: all .2s; }
-.chip input { position: absolute; opacity: 0; pointer-events: none; }
-.chip.is-active { border-color: var(--accent); color: var(--accent); }
-.chip:has(input:focus-visible) { outline: 1px solid var(--accent); }
-.hp { position: absolute; left: -9999px; }
-.ct-submit { justify-self: start; padding: 18px 28px; }
-.ct-status { min-height: 16px; }
-
-/* 06 CTA WHATSAPP */
+/* 05 CANAL DIRETO (WHATSAPP + INSTAGRAM) */
 .cta { min-height: 80svh; display: flex; align-items: center; text-align: center; background: radial-gradient(ellipse at 50% 60%, rgba(0, 255, 102, .08), rgba(8, 9, 10, 0) 60%), var(--bg); overflow: clip; }
 .cta-line { position: absolute; top: 0; left: var(--pad); right: var(--pad); height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); transform-origin: center; }
 .cta-inner { display: flex; flex-direction: column; align-items: center; }
@@ -326,18 +298,24 @@ main.is-booting .hero-inner, main.is-booting .techbar { visibility: hidden; }
   box-shadow: 0 0 40px rgba(0, 255, 102, .35); transition: box-shadow .3s, transform .3s;
 }
 .cta-btn:hover { box-shadow: 0 0 70px rgba(0, 255, 102, .6); transform: translateY(-2px); }
+.cta-ig { margin-top: 18px; color: var(--slate-2); border-bottom: 1px solid var(--line); padding-bottom: 4px; transition: color .2s, border-color .2s; }
+.cta-ig:hover { color: var(--accent); border-color: var(--accent); }
 .cta-ring { position: absolute; inset: 0; border: 1px solid var(--accent); pointer-events: none; }
 @media (max-width: 560px) { .cta-btn { width: 100%; justify-content: center; padding: 20px; } }
 
 /* FOOTER */
-.footer { position: relative; z-index: 1; background: var(--bg); padding: 0 0 40px; }
+.footer { position: relative; z-index: 1; background: var(--bg); padding: 0 0 96px; }
 .footer-line { height: 1px; background: var(--line); margin-bottom: 36px; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: end; font-size: 11px; }
 .footer-logo { width: 120px; color: var(--slate); margin-bottom: 14px; }
 .footer-grid nav { display: grid; gap: 8px; justify-items: center; }
 .footer-grid nav a { color: var(--slate-2); }
 .footer-grid nav a:hover { color: var(--accent); }
-.footer-credit { text-align: right; }
+.footer-credit { justify-self: end; display: inline-flex; align-items: center; gap: 12px; }
+.footer-credit img { width: 36px; height: 36px; transition: transform .3s; }
+.footer-credit:hover img { transform: rotate(-8deg) scale(1.08); }
+.footer-handle { color: var(--slate-2); }
+.footer-credit:hover .footer-handle { color: var(--accent); }
 
 /* RESPONSIVO */
 @media (max-width: 960px) {
@@ -345,7 +323,7 @@ main.is-booting .hero-inner, main.is-booting .techbar { visibility: hidden; }
   .seq { grid-template-columns: 1fr; padding: 72px var(--pad) 24px; }
   .seq-meta { display: none; }
   .seq-panel { justify-self: center; height: calc(100svh - 110px); max-width: 100%; }
-  .mf-grid, .tx-grid, .radar-grid, .ct-grid { grid-template-columns: 1fr; }
+  .mf-grid, .tx-grid, .radar-grid { grid-template-columns: 1fr; }
   .portrait { position: relative; top: 0; max-width: 480px; }
   .tx-slot { grid-template-columns: 1fr auto; gap: 6px 16px; }
   .tx-id { grid-column: 1 / -1; }
@@ -358,7 +336,7 @@ main.is-booting .hero-inner, main.is-booting .techbar { visibility: hidden; }
   .pk-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid nav { justify-items: start; }
-  .footer-credit { text-align: left; }
+  .footer-credit { justify-self: start; flex-wrap: wrap; }
 }
 @media (max-width: 560px) {
   .specs { grid-template-columns: 1fr; }

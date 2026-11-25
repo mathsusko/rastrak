@@ -71,14 +71,12 @@ export default function Presskit() {
 
       <div className="wrap pk-grid">
         <article className="pk-block">
-          <p className="mono dim">01 // LOGOTIPOS & IDENTIDADE</p>
+          <p className="mono dim">01 // IDENTIDADE</p>
           <div className="pk-logos">
             <span className="logo-solid" aria-hidden />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/logo-mark.png" alt="" className="pk-mark" />
           </div>
-          <p className="pk-note mono">Assinatura angular (sólida e contorno) + cabeça codificada. PNG transparente.</p>
-          <a className="btn btn-accent mono" href="/presskit/RASTRAK_logotipos.zip" download>[ BAIXAR LOGOS ]</a>
         </article>
 
         <article className="pk-block">
@@ -89,8 +87,6 @@ export default function Presskit() {
               <img key={p} src={`/img/${p}.webp`} alt="" loading="lazy" />
             ))}
           </div>
-          <p className="pk-note mono">7 arquivos · JPG alta resolução</p>
-          <a className="btn btn-accent mono" href="/presskit/RASTRAK_fotos-oficiais.zip" download>[ BAIXAR FOTOS ]</a>
         </article>
 
         <article className="pk-block">

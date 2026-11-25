@@ -14,7 +14,6 @@ import Manifesto from "./Manifesto";
 import Transmissions from "./Transmissions";
 import Radar from "./Radar";
 import Presskit from "./Presskit";
-import Contact from "./Contact";
 import Cta from "./Cta";
 import Footer from "./Footer";
 
@@ -23,7 +22,7 @@ const nav = [
   { href: "#transmissoes", label: "02 TRANSMISSÕES" },
   { href: "#radar", label: "03 RADAR" },
   { href: "#presskit", label: "04 PRESSKIT" },
-  { href: "#contato", label: "05 BOOKING" },
+  { href: "#whatsapp", label: "05 BOOKING" },
 ];
 
 export default function Experience() {
@@ -96,7 +95,6 @@ export default function Experience() {
         <Transmissions />
         <Radar />
         <Presskit />
-        <Contact />
         <Cta />
         <Footer />
       </main>

@@ -12,8 +12,7 @@ const sections = [
   { id: "transmissoes", n: "02", label: "TRANSMISSÕES" },
   { id: "radar", n: "03", label: "RADAR" },
   { id: "presskit", n: "04", label: "PRESSKIT" },
-  { id: "contato", n: "05", label: "BOOKING" },
-  { id: "whatsapp", n: "06", label: "CANAL ABERTO" },
+  { id: "whatsapp", n: "05", label: "CANAL DIRETO" },
 ];
 
 function framePath(w: number, h: number, m: number, mobile: boolean) {
@@ -119,7 +118,7 @@ export default function Hud({ entered }: { entered: boolean }) {
       )}
 
       <div className="hud-section mono">
-        <span className="hud-tab-label">{s.n} // {s.label}</span>
+        <span className="hud-tab-label">{`${s.n} // ${s.label}`}</span>
         <span className="hud-index">{s.n}</span>
       </div>
     </div>

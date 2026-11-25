@@ -7,28 +7,30 @@ export const links = {
   youtube: "https://www.youtube.com/@rastrak.music4",
 };
 
-// WhatsApp de booking (só dígitos, com DDI e DDD, ex.: 5541999999999). Pendente do Raphael.
+// WhatsApp de booking do Raphael (só dígitos, com DDI e DDD).
 export const whatsapp = {
-  number: "",
+  number: "5541999389304",
   message: "Olá, Raphael! Vi o presskit da RASTRAK e quero conversar sobre uma data/collab.",
 };
 
-export const waLink = () =>
-  whatsapp.number
-    ? `https://wa.me/${whatsapp.number}?text=${encodeURIComponent(whatsapp.message)}`
-    : links.instagram;
+export const waLink = (message = whatsapp.message) =>
+  `https://wa.me/${whatsapp.number}?text=${encodeURIComponent(message)}`;
+
+/** Direct do Instagram do artista. */
+export const igDirect = "https://ig.me/m/_rastrak.music";
 
 export const cta = {
-  index: "Índice 06 // CANAL ABERTO",
+  index: "Índice 05 // CANAL DIRETO",
   headline: "Leve essa frequência para a sua pista.",
-  text: "Datas, B2Bs e convites de curadoria direto com o Raphael. Resposta rápida pelo WhatsApp.",
+  text: "Datas, B2Bs, convites de curadoria e contato de agência direto com o Raphael, pelo WhatsApp ou pelo direct do Instagram.",
   button: "[ CHAMAR NO WHATSAPP ]",
+  buttonIg: "[ DIRECT NO INSTAGRAM ]",
 };
 
 export const hero = {
   tag: "PSYTRANCE // FULL-ON UNDERGROUND",
   subtitle:
-    "Arquitetura sonora para pista noturna. Grooves hipnóticos, tensão mental e condução técnica.",
+    "Arquitetura sonora para pista noturna. Full-on hipnótico, ritmado e groovado — energia que pertence à noite.",
   bpm: "145–148",
   status: "DISPONÍVEL PARA BOOKING & COLLABS",
 };
@@ -36,11 +38,11 @@ export const hero = {
 export const manifesto = {
   index: "Índice 01 // IDENTIDADE & PESQUISA",
   headline: "O som como código de imersão.",
-  text: "RASTRAK é o projeto de full-on underground conduzido por Raphael Ferreira. Desde 2022, a pesquisa concentra-se na interseção entre precisão rítmica, atmosferas densas e leitura cirúrgica de pista — dispensando fórmulas comerciais em favor de uma narrativa contínua e hipnótica. Com formação técnica em desenvolvimento na Heostage, o projeto traduz disciplina de estúdio e curadoria rigorosa em sets desenhados para sustentar o estado de fluxo coletivo, onde cada virada reorganiza a percepção de corpo e espaço.",
+  text: "RASTRAK é o projeto de full-on underground conduzido por Raphael Ferreira. O recorte é preciso: full-on hipnótico, ritmado e groovado, com a energia enraizada no noturno. Desde 2022, a pesquisa concentra-se na interseção entre precisão rítmica, groove e leitura cirúrgica de pista — dispensando fórmulas comerciais em favor de uma narrativa contínua e hipnótica. Com formação técnica em desenvolvimento na Heostage, o projeto traduz disciplina de estúdio e curadoria rigorosa em sets desenhados para sustentar o estado de fluxo coletivo, onde cada virada reorganiza a percepção de corpo e espaço.",
   specs: [
-    { k: "Vertente", v: "Full-On Noturno / Hipnótico" },
+    { k: "Recorte", v: "Full-On Hipnótico / Ritmado / Groovado" },
     { k: "DNA de Set", v: "Grooves secos, linhas de baixo firmes, progressão mental" },
-    { k: "Janela Ideal", v: "Madrugada densa / Pistas underground" },
+    { k: "Janela Ideal", v: "Pista noturna — a energia é da noite" },
     { k: "Formação", v: "Heostage — em curso" },
   ],
 };
@@ -76,16 +78,16 @@ export const radar = {
       id: "festivais",
       label: "ABA 01 — FESTIVAIS & NÚCLEOS",
       short: "FESTIVAIS & NÚCLEOS",
-      hypothesis: "Núcleos underground e pistas noturnas; madrugada densa.",
-      targets: ["Adhana", "Kranti", "Pulsar", "Respect", "Coletivos regionais"],
+      hypothesis: "Festivais psicodélicos e de progressive, com pistas noturnas onde o full-on hipnótico e groovado encaixa.",
+      targets: ["Universo Paralello", "Adhana", "Terra Azul", "PVTzinha (SP)", "Pistas psicodélicas", "Progressive"],
       objective: "Mostrar encaixe de horário e perfil de pista para curadores.",
     },
     {
       id: "booking",
       label: "ABA 02 — AGÊNCIAS & BOOKING",
       short: "AGÊNCIAS & BOOKING",
-      hypothesis: "Construção de vitrine técnica, gigs em coletivos independentes e aproximação com booking underground.",
-      targets: ["Booking underground", "Coletivos independentes", "Vitrine técnica"],
+      hypothesis: "Gigs locais e regionais como base, construindo vitrine para chegar ao booking underground.",
+      targets: ["Hipnose", "Psygroove", "Alltrip", "Elementum (PR)"],
       objective: "Alinhar estágio atual e facilitar contato direto de booking.",
     },
     {
@@ -110,7 +112,7 @@ export const radar = {
 export const presskit = {
   index: "Índice 04 // MATERIAL DE IMPRENSA",
   headline: "Presskit & Especificações.",
-  bio: "RASTRAK é o projeto de full-on underground de Raphael Ferreira. Desde 2022, pesquisa a interseção entre precisão rítmica, atmosferas densas e leitura de pista, em sets hipnóticos desenhados para a madrugada. Formação técnica em curso na Heostage.",
+  bio: "RASTRAK é o projeto de full-on underground de Raphael Ferreira. Full-on hipnótico, ritmado e groovado, com a energia enraizada no noturno. Desde 2022, pesquisa a interseção entre precisão rítmica, groove e leitura de pista. Formação técnica em curso na Heostage.",
   rider: [
     "2x CDJ-3000 (ou 2x CDJ-2000NXS2) em rede / Pro DJ Link",
     "1x DJM-900NXS2",
@@ -118,11 +120,4 @@ export const presskit = {
     "Mesa estável, nivelada e livre de vibração",
   ],
   photos: ["portrait-dark", "photo-01", "photo-02", "photo-03", "photo-04", "photo-05", "photo-06"],
-};
-
-export const contact = {
-  index: "Índice 05 // TRANSMISSÃO DIRETA",
-  headline: "Booking, collabs e curadoria.",
-  subtitle: "Envie sua proposta de data, convite de B2B ou contato de agência.",
-  types: ["Festival / Núcleo", "Agência / Booking", "Collab / B2B", "Label / Produtora"],
 };

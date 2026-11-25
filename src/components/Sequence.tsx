@@ -115,7 +115,7 @@ export default function Sequence() {
         <span className="dim">CHANNEL</span>
         <span>REC ● <b className="accent">ON</b></span>
         <span className="dim">WINDOW</span>
-        <span>MADRUGADA DENSA</span>
+        <span>PISTA NOTURNA</span>
       </div>
 
       <p className="seq-quote">
